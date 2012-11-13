@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+<!-- 	Nome da classe a ser mapeada e a tabela correspondente no banco de dados -->
+	<class name="br.com.triadworks.blog.model.Filme" table="Filme">
+	
+<!-- 		Definindo a chave primaria da tabela -->
+		<id name="codigo" type="int" column="codigo">
+<!-- 		Gera o valor de acordo com padrao do banco de dados usado -->
+			<generator class="native" />
+		</id>
+
+<!-- 		Colunas da tabela "Filme" -->
+		<property name="titulo">
+			<column name="titulo" />
+		</property>
+		<property name="ano">
+			<column name="ano" />
+		</property>
+	</class>
+</hibernate-mapping>
